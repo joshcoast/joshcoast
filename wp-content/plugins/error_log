@@ -1,0 +1,5 @@
+[09-May-2017 16:23:50 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/joshpica/public_html/wp-content/plugins/hello.php on line 60
+[25-May-2017 21:25:16 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/joshpica/public_html/wp-content/plugins/hello.php on line 60
+[05-Nov-2017 16:46:49 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/joshpica/public_html/wp-content/plugins/hello.php on line 60
+[05-Nov-2017 16:46:54 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/joshpica/public_html/wp-content/plugins/hello.php on line 60
+[13-Jan-2018 02:53:13 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/joshpica/public_html/wp-content/plugins/hello.php on line 60

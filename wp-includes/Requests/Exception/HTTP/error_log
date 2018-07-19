@@ -1,0 +1,12 @@
+[28-Jan-2018 16:51:56 UTC] PHP Fatal error:  Class 'Requests_Exception_HTTP' not found in /home/joshpica/public_html/wp-includes/Requests/Exception/HTTP/414.php on line 13
+[28-Jan-2018 16:51:58 UTC] PHP Fatal error:  Class 'Requests_Exception_HTTP' not found in /home/joshpica/public_html/wp-includes/Requests/Exception/HTTP/412.php on line 13
+[28-Jan-2018 17:21:49 UTC] PHP Fatal error:  Class 'Requests_Exception_HTTP' not found in /home/joshpica/public_html/wp-includes/Requests/Exception/HTTP/408.php on line 13
+[28-Jan-2018 20:33:34 UTC] PHP Fatal error:  Class 'Requests_Exception_HTTP' not found in /home/joshpica/public_html/wp-includes/Requests/Exception/HTTP/402.php on line 13
+[28-Jan-2018 22:44:32 UTC] PHP Fatal error:  Class 'Requests_Exception_HTTP' not found in /home/joshpica/public_html/wp-includes/Requests/Exception/HTTP/411.php on line 13
+[28-Jan-2018 22:44:59 UTC] PHP Fatal error:  Class 'Requests_Exception_HTTP' not found in /home/joshpica/public_html/wp-includes/Requests/Exception/HTTP/411.php on line 13
+[29-Jan-2018 00:13:55 UTC] PHP Fatal error:  Class 'Requests_Exception_HTTP' not found in /home/joshpica/public_html/wp-includes/Requests/Exception/HTTP/405.php on line 13
+[29-Jan-2018 00:13:55 UTC] PHP Fatal error:  Class 'Requests_Exception_HTTP' not found in /home/joshpica/public_html/wp-includes/Requests/Exception/HTTP/405.php on line 13
+[29-Jan-2018 01:23:01 UTC] PHP Fatal error:  Class 'Requests_Exception_HTTP' not found in /home/joshpica/public_html/wp-includes/Requests/Exception/HTTP/306.php on line 13
+[29-Jan-2018 01:33:22 UTC] PHP Fatal error:  Class 'Requests_Exception_HTTP' not found in /home/joshpica/public_html/wp-includes/Requests/Exception/HTTP/409.php on line 13
+[29-Jan-2018 02:50:25 UTC] PHP Fatal error:  Class 'Requests_Exception_HTTP' not found in /home/joshpica/public_html/wp-includes/Requests/Exception/HTTP/413.php on line 13
+[29-Jan-2018 02:50:25 UTC] PHP Fatal error:  Class 'Requests_Exception_HTTP' not found in /home/joshpica/public_html/wp-includes/Requests/Exception/HTTP/413.php on line 13

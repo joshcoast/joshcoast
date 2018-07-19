@@ -1,0 +1,1 @@
+[16-Apr-2018 19:37:05 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/joshpica/public_html/wp-includes/class-wp-query.php on line 785

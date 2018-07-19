@@ -1,0 +1,4 @@
+[28-Jan-2018 15:56:30 UTC] PHP Fatal error:  Class 'WP_Customize_Setting' not found in /home/joshpica/public_html/wp-includes/customize/class-wp-customize-background-image-setting.php on line 17
+[28-Jan-2018 15:56:30 UTC] PHP Fatal error:  Class 'WP_Customize_Setting' not found in /home/joshpica/public_html/wp-includes/customize/class-wp-customize-background-image-setting.php on line 17
+[28-Jan-2018 15:56:36 UTC] PHP Fatal error:  Class 'WP_Customize_Setting' not found in /home/joshpica/public_html/wp-includes/customize/class-wp-customize-background-image-setting.php on line 17
+[28-Jan-2018 15:56:38 UTC] PHP Fatal error:  Class 'WP_Customize_Setting' not found in /home/joshpica/public_html/wp-includes/customize/class-wp-customize-background-image-setting.php on line 17
