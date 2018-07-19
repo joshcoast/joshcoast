@@ -1,0 +1,11 @@
+$black: #222;
+$dark: #33c0f7;
+$light: rgba(254, 243, 224, 0.52);
+
+
+.wp-block-joshblocks-pictureblock {
+  display: flex;
+  .pb-col {
+    flex: 1 1 auto;
+  }
+}
