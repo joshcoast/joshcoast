@@ -12,3 +12,12 @@ lopezpaintings.com
 purpleginger.com
 sidewokcafe.com
 wendyandjosh.com
+
+/wp-content/plugins/joshenberg/composer.lock
+/wp-content/plugins/joshenberg/node_modules/
+/wp-content/plugins/joshenberg/vendor/
+/wp-content/plugins/joshenberg/logs/
+/wp-content/plugins/joshenberg/reports/
+
+.DS_Store
+.DS_Store?
