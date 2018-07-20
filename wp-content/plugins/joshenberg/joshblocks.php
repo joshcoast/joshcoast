@@ -7,19 +7,16 @@
  * @license     GPL2+
  *
  * @wordpress-plugin
- * Plugin Name: Gutenberg - Example Blocks
- * Plugin URI:  https://gutenberg.courses
- * Description: An plugin containing example blocks for developers.  From <a href="https://gutenberg.courses/development">Zac Gordon's Gutenberg Development Course</a>.
- * Version:     2.1.0
- * Author:      Zac Gordon (@zgordon)
- * Author URI:  https://twitter.com/zgordon
- * Text Domain: jsforwpblocks
- * Domain Path: /languages
- * License:     GPL2+
- * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Plugin Name: JoshBlocks
+ * Plugin URI:  http://joshcoast.com
+ * Description: An plugin containing example blocks for developers.
+ * Version:     1.0
+ * Author:      Josh Coast
+ * Author URI:  http://joshcoast.com
+ * Text Domain: joshblocks
  */
 
-namespace Gutenberg_Courses\Example_Blocks;
+namespace Josh_Blocks\Example_Blocks;
 
 //  Exit if accessed directly.
 defined('ABSPATH') || exit;
@@ -27,7 +24,7 @@ defined('ABSPATH') || exit;
 /**
  * Gets this plugin's absolute directory path.
  *
- * @since  2.1.0
+ * @since  1.0
  * @ignore
  * @access private
  *
@@ -40,7 +37,7 @@ function _get_plugin_directory() {
 /**
  * Gets this plugin's URL.
  *
- * @since  2.1.0
+ * @since  1.0
  * @ignore
  * @access private
  *

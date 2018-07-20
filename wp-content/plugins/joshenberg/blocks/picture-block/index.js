@@ -4,6 +4,7 @@
  */
 import icons from './icons';
 import './editor.scss';
+import './style.scss';
 
 /**
  * Internal block libraries
@@ -29,7 +30,7 @@ export default registerBlockType(
   // namespace/block-name
   'joshblocks/image-upload', 
   {
-    title: __( 'Example - Image Upload Josh', 'joshblocks' ),
+    title: __( 'Picture Block', 'joshblocks' ),
     description: __( 'An example of how to use the MediaUpload component.', 'joshblocks'),
     category: 'common',
     icon: {
@@ -105,7 +106,7 @@ export default registerBlockType(
               tagName="div"
               multiline="p"
               className="message"
-              placeholder={ __( 'Add your custom message', 'jsforwpblocks' ) }
+              placeholder={ __( 'Add your custom message', 'joshblocks' ) }
               onChange={ message => { setAttributes( { message } ) } }
               value={ message }
             />
@@ -155,8 +156,7 @@ export default registerBlockType(
           <div className="message-body">
             { message }
           </div>
-          <div style={divStyle}></div>
-          <p><img src={ imgURL } alt={ imgAlt }/></p>
+          <div  className="image-block" style={divStyle}></div>
         </div>
       );
     },

@@ -2,10 +2,18 @@ $black: #222;
 $dark: #33c0f7;
 $light: rgba(254, 243, 224, 0.52);
 
-
-.wp-block-joshblocks-pictureblock {
+.wp-block-joshblocks-image-upload {
   display: flex;
-  .pb-col {
-    flex: 1 1 auto;
+  .message-body {
+    width: 50%;
+    padding-right: 1em;
+  }
+  .image-block {
+    min-height: 150px;
+    width: 50%;
+    background-position: center center;
+    background-size: cover;
   }
 }
+
+
