@@ -1,6 +1,6 @@
 <?php
 
-namespace Gutenberg_Courses\Example_Blocks;
+namespace Josh_Blocks\Example_Blocks;
 
 add_action( 'init', __NAMESPACE__ . '\register_meta_fields' );
 /**
@@ -9,7 +9,7 @@ add_action( 'init', __NAMESPACE__ . '\register_meta_fields' );
 function register_meta_fields() {
 	register_meta(
 		'post',
-		'jsforwpblocks_gb_metabox',
+		'joshblocks_gb_metabox',
 		[
 			'type'         => 'string',
 			'single'       => true,

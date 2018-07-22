@@ -8,23 +8,25 @@ import './style.scss';
 
 /**
  * Internal block libraries
- * These are mostly coming form what WordPress has either dev for us, or included.
  */
 const { __ } = wp.i18n;
+
 const {
     registerBlockType,
 } = wp.blocks;
+
 const {
     Editable,
     MediaUpload,
     RichText,
 } = wp.editor;
+
 const {
     Button,
 } = wp.components;
 
 /**
- * Register example block
+ * Register block
  */
 export default registerBlockType( 
   // namespace/block-name
@@ -50,30 +52,18 @@ export default registerBlockType(
       },
       imgURL: {
         type: 'string',
-        source: 'attribute',
-        attribute: 'src',
-        selector: 'img',
+        //source: 'attribute',
+        //attribute: 'src',
+        //selector: 'div.image-block',
       },
       imgID: {
         type: 'number',
-      },
-      imgAlt: {
-        type: 'string',
-        source: 'attribute',
-        attribute: 'alt',
-        selector: 'img',
-      },
-      imgTitle: {
-        type: 'string',
-        source: 'attribute',
-        attribute: 'title',
-        selector: 'img',
       }
     },
 
     // Edit is what gets sent to the wp-admin end
     edit: props => {
-      const { attributes: { imgID, imgURL, imgAlt, imgTitle, message }, className, setAttributes, isSelected } = props;
+      const { attributes: { imgID, imgURL, message }, className, setAttributes, isSelected } = props;
 
       const divStyle = {
         backgroundImage: "url(" + imgURL + ")"
@@ -83,18 +73,13 @@ export default registerBlockType(
         setAttributes( {
           imgID: img.id,
           imgURL: img.url,
-          imgAlt: img.alt,
-          imgTitle: img.title,
         } );
       };
-      console.log(props);
 
       const onRemoveImage = () => {
         setAttributes({
           imgID: null,
           imgURL: null,
-          imgAlt: null,
-          imgTitle: null,
         });
       }
 
@@ -112,8 +97,6 @@ export default registerBlockType(
             />
           </div>
 
-          <div style={divStyle}></div>
-        
           { ! imgID ? (
             <MediaUpload
               onSelect={ onSelectImage }
@@ -128,14 +111,15 @@ export default registerBlockType(
             >
             </MediaUpload>
           ) : (
-            <p className="image-wrapper">
-              <img src={ imgURL } alt={ imgAlt } />
-              { isSelected ? (
-                <Button className="remove-image" onClick={ onRemoveImage } >
-                  { icons.remove }
-                </Button>
-              ) : null }
-            </p>
+            <div className="image-block" style={divStyle}>
+              <div className="image-wrapper">
+                { isSelected ? (
+                  <Button className="remove-image" onClick={ onRemoveImage } >
+                    { icons.remove }
+                  </Button>
+                ) : null }
+              </div>
+            </div>
           )}
 
         </div>
@@ -144,7 +128,7 @@ export default registerBlockType(
 
     // Save is what gets sent to the front end.
     save: props => {
-      const { imgURL, imgAlt, imgTitle, message } = props.attributes;
+      const { attributes: { imgURL, message }} = props;
 
       const divStyle = {
         backgroundImage: `url(${imgURL})`
@@ -156,7 +140,7 @@ export default registerBlockType(
           <div className="message-body">
             { message }
           </div>
-          <div  className="image-block" style={divStyle}></div>
+          <div className="image-block" style={divStyle}></div>
         </div>
       );
     },

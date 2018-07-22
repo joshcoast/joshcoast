@@ -2,8 +2,8 @@
 /**
  * Plugin's bootstrap file to launch the plugin.
  *
- * @package     Gutenberg_Courses\Example_Blocks
- * @author      Zac Gordon (@zgordon)
+ * @package     Josh_Blocks\Example_Blocks
+ * @author      Josh Coast
  * @license     GPL2+
  *
  * @wordpress-plugin
@@ -63,4 +63,4 @@ include __DIR__ . '/lib/meta-boxes.php';
 include __DIR__ . '/lib/block-templates.php';
 
 // Dynamic Blocks
-include __DIR__ . '/blocks/12-dynamic/index.php';
+//include __DIR__ . '/blocks/12-dynamic/index.php';
