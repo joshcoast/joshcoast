@@ -11,6 +11,8 @@ This plugin is intended for experimentation, not recommended for production site
 
 ## To create a new block
 
-* Add a directory for you new block in `blocks` directory and import that new block in `blocks/index.js`.
-* `index.js` will be read first in your new block by default.
-
+* Add a directory for your new block in `blocks` directory and import that new block in `blocks/index.js`.
+* `index.js` is read first in your new block by default.
+* Some good resources I found for learning about Gutenberg block development: 
+  - Zac Gordon `https://javascriptforwp.com/courses/gutenburg-development/`
+  - Lara Schenck `https://css-tricks.com/learning-gutenberg-1-series-intro/`

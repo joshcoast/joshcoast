@@ -3,6 +3,7 @@
  * These are what we include in our block
  */
 import icons from './icons';
+import classnames from 'classnames';
 import './editor.scss';
 import './style.scss';
 
@@ -19,6 +20,9 @@ const {
     Editable,
     MediaUpload,
     RichText,
+    AlignmentToolbar,
+    BlockControls,
+    BlockAlignmentToolbar,
 } = wp.editor;
 
 const {
@@ -60,15 +64,28 @@ export default registerBlockType(
       },
       imgID: {
         type: 'number',
+      },
+      blockAlignment: {
+        type: 'string',
+        default: 'full',
+      },
+    },
+
+    // sets element wrapper data-align attribute
+    getEditWrapperProps( { blockAlignment } ) {
+      if ( 'left' === blockAlignment || 'right' === blockAlignment || 'full' === blockAlignment ) {
+          return { 'data-align': blockAlignment };
       }
     },
 
     // Edit is what gets sent to the wp-admin end
     edit: props => {
-      const { attributes: { imgID, imgURL, message }, className, setAttributes, isSelected } = props;
+      const { 
+        attributes: { imgID, imgURL, message, blockAlignment }, 
+        className, setAttributes, isSelected } = props;
 
       const divStyle = {
-        backgroundImage: "url(" + imgURL + ")"
+        backgroundImage: `url(${imgURL})`
       };
 
       const onSelectImage = img => {
@@ -87,8 +104,14 @@ export default registerBlockType(
 
       return (
         <div className={ className }>
-
+          <BlockControls>
+            <BlockAlignmentToolbar
+              value={ blockAlignment }
+              onChange={ blockAlignment => setAttributes( { blockAlignment } ) }
+            />
+          </BlockControls>
           <div className="message-body">
+  
             <RichText
               tagName="div"
               multiline="p"
@@ -130,7 +153,7 @@ export default registerBlockType(
 
     // Save is what gets sent to the front end.
     save: props => {
-      const { attributes: { imgURL, message }} = props;
+      const { blockAlignment, imgURL, message } = props.attributes;
 
       const divStyle = {
         backgroundImage: `url(${imgURL})`
@@ -138,7 +161,7 @@ export default registerBlockType(
 
       return (
 
-        <div>
+        <div className={classnames(`align${blockAlignment}`)}>
           <div className="message-body">
             { message }
           </div>

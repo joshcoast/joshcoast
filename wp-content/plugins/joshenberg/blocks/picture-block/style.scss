@@ -1,19 +1,61 @@
-$black: #222;
-$dark: #33c0f7;
-$light: rgba(254, 243, 224, 0.52);
-
 .wp-block-joshblocks-image-upload {
-  display: flex;
+  background-color: #f9f9f9;
+  padding: 40px 0;
   .message-body {
-    width: 50%;
-    padding-right: 1em;
+    p:first-child {
+      margin-top: 0;
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
   }
   .image-block {
-    min-height: 150px;
-    width: 50%;
+    min-height: 50vh;
+    width: 100%;
     background-position: center center;
     background-size: cover;
   }
+  &.alignfull {
+    padding: 0;
+    .message-body {
+      padding: 2em;
+    }
+  }
 }
+
+@media only screen and (min-width: 768px) {
+  .wp-block-joshblocks-image-upload {
+    display: flex;
+    min-height: 45vh;
+    .message-body {
+      width: 50%;
+    }
+    .image-block {
+      min-height: 45vh;
+      width: 50%;
+      background-position: center center;
+      background-size: cover;
+    }
+    &.alignfull {
+    }
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .wp-block-joshblocks-image-upload {
+    min-height: 50vh;
+    .message-body {
+      font-size: 1.15em;
+    }
+    &.alignfull {
+      .message-body {
+        padding: 4em;
+      }
+    }
+  }
+}
+
+
+
+
 
 
