@@ -1,8 +1,12 @@
 {
   "name": "josh-blocks",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "license": "MIT",
   "main": "blocks/index.js",
+  "keywords": [
+    "WordPress Gutenberg",
+    "Gutenberg"
+  ],
   "scripts": {
     "dev": "cross-env BABEL_ENV=default webpack --watch",
     "build": "cross-env BABEL_ENV=default NODE_ENV=production webpack"

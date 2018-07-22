@@ -52,6 +52,8 @@ export default registerBlockType(
       },
       imgURL: {
         type: 'string',
+        // processing the image as a simple string 
+        // since we are using the url as an inline background style
         //source: 'attribute',
         //attribute: 'src',
         //selector: 'div.image-block',
