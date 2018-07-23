@@ -1,7 +1,7 @@
 .wp-block-joshblocks-image-upload {
-  background-color: #f9f9f9;
-  padding: 40px 0;
+  background-color: #e0e0e0;
   .message-body {
+    padding: 2em;
     p:first-child {
       margin-top: 0;
     }
@@ -21,6 +21,13 @@
       padding: 2em;
     }
   }
+  &.alignful,
+  &.alignwide,
+  &.alignleft,
+  &.alignright,
+  &.aligncenter {
+    padding: 0;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -36,7 +43,24 @@
       background-position: center center;
       background-size: cover;
     }
-    &.alignfull {
+    &.alignleft {
+      max-width: 75% !important;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    &.aligncenter {
+      //max-width: 75% !important;
+      .message-body {
+        width: 100%;
+      }
+      .image-block {
+        width: 100%;
+      }
+    }
+    &.alignright {
+      max-width: 75% !important;
+      margin-left: 25%;
+      margin-right: 0;
     }
   }
 }

@@ -73,7 +73,7 @@ export default registerBlockType(
 
     // sets element wrapper data-align attribute
     getEditWrapperProps( { blockAlignment } ) {
-      if ( 'left' === blockAlignment || 'right' === blockAlignment || 'full' === blockAlignment ) {
+      if ( 'left' === blockAlignment || 'center' === blockAlignment || 'right' === blockAlignment || 'full' === blockAlignment || 'wide' === blockAlignment ) {
           return { 'data-align': blockAlignment };
       }
     },
@@ -102,6 +102,8 @@ export default registerBlockType(
         });
       }
 
+      console.log(blockAlignment);
+
       return (
         <div className={ className }>
           <BlockControls>
@@ -128,10 +130,12 @@ export default registerBlockType(
               type="image"
               value={ imgID }
               render={ ( { open } ) => (
-                <Button className={ "button button-large" } onClick={ open } >
-                  { icons.upload }
-                  { __( ' Upload Image', 'joshblocks' ) }
-                </Button>
+                <div className="image-block no-image">
+                  <Button className={ "button button-large add-image" } onClick={ open } >
+                    { icons.upload }
+                    { __( ' Upload Image', 'joshblocks' ) }
+                  </Button>
+                </div>
               ) }
             >
             </MediaUpload>
